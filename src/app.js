@@ -9,7 +9,7 @@ const app = express();
 //middlewares
 app.use(express.json());
 
-app.post("/create")
+app.post("/create", createProject);
 app.use("/projects", projectRoutes);
 app.use("/tasks", taskRoutes);
 
