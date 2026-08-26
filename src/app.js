@@ -2,12 +2,14 @@ import express from "express";
 import projectRoutes from "./routes/project.routes.js";
 import taskRoutes from "./routes/task.routes.js";
 import { sequelize } from "./database/dbConfig.js";
+import {createProject} from "./controllers/project.controller.js";
 
 const app = express();
 
 //middlewares
 app.use(express.json());
 
+app.post("/create")
 app.use("/projects", projectRoutes);
 app.use("/tasks", taskRoutes);
 
