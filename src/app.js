@@ -1,6 +1,7 @@
 import express from "express";
 import projectRoutes from "./routes/project.routes.js";
 import taskRoutes from "./routes/task.routes.js";
+import { sequelize } from "./database/dbConfig.js";
 
 const app = express();
 
