@@ -21,7 +21,7 @@ export const createProject = async (req, res) => {
         })
         //le pasamos el body, que en un proyecto real, viene de un DTO, el servicio
 
-        return res.send(newProject);
+        return res.json(newProject);
     } catch(error) {
         return res.status(500).json({error: error.message})
     }
