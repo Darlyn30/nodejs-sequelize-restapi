@@ -11,7 +11,7 @@ app.use(express.json());
 app.use("/projects", projectRoutes);
 app.use("/tasks", taskRoutes);
 
-app.listen(3001, async() => {
+app.listen(3000, async() => {
   try {
     await sequelize.sync({force: false});
     console.log("Server on port 3000");
