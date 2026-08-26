@@ -5,9 +5,9 @@ import { getProjects, getProjectTasks, createProject, updateProject, deleteProje
 router.get("/", getProjects);
 
 router.get("/:id", getProjectById);
-router.post("/", createProject);
-router.put("/:id", updateProject);
-router.delete("/:id", deleteProject);
+router.post("/create", createProject);
+router.put("/update/:id", updateProject);
+router.delete("/delete/:id", deleteProject);
 
 router.get("/:id/tasks", getProjectTasks);
 
