@@ -12,6 +12,9 @@ export const getProjects = async (req, res) => {
 
 export const createProject = async (req, res) => {
     const {name, priority, description} = req.body; // recordando que el id es autogenerado por sql
+    console.log(name);
+    console.log(priority);
+    console.log(description);
 
     try {
         const newProject = await Project.create({
